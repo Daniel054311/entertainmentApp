@@ -44,10 +44,19 @@
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
-.settingsContainer div{
+.settingsContainer .settings{
   Width:15vh;
   Height:15vh;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.add{
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 .settings1{
   background-color: #DF9BE0;
