@@ -7,7 +7,7 @@
       <div class="navItems">
         <ul>
           <li>
-            <a routerLink= '' routerLinkActive="active">Back</a>
+            <a routerLink= '/continue-page' routerLinkActive="active">Back</a>
           </li>
           <li>
             <a routerLink="#">Step 1 / 2</a>
@@ -27,7 +27,7 @@
         <div class="settingsContainer">
           <div class="settings settings1">
             <h1>Gamming</h1>
-            <div class="add">Add <i class="fa-solid fa-check"></i></div>
+            <div class="add">Added <i class="fa-solid fa-check"></i></div>
           </div>
           <div class="settings settings2">
             <h1>Fashion</h1>
@@ -43,7 +43,7 @@
           </div>
         </div>
 
-        <button class="primary">Continue</button>
+        <button class="primary" (click)="onButtonClick()">Continue</button>
       </div>
 
     </div>
