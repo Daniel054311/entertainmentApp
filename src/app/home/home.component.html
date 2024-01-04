@@ -1,0 +1,41 @@
+<section>
+  <div class="gridContainer">
+    <div class="leftContainer"></div>
+    <div class="rightContainer">
+      <div class="navItems">
+        <ul>
+          <li>
+            <a routerLink="">STEP 1 / 2</a>
+          </li>
+          <li>
+            <a routerLink="">EXIT</a>
+          </li>
+        </ul>
+      </div>
+      <div class="createAccount">
+        <h1>Create Account</h1>
+        <form [formGroup]="applyForm" class="formGroup">
+          <div class="inputGroup">
+            <label for="firstName">First Name</label>
+
+            <input type="text" id="firstName" formControlName="firstName" placeholder= 'John Doe'>
+          </div>
+          <div class="inputGroup">
+            <label for="email">Email</label>
+            
+            <input type="email" id="email" formControlName="email"  placeholder="johndoe@gmail.com">
+          </div>
+          <div class="inputGroup">
+            <label for="password">Password</label>
+            <input type="password" id="password" formControlName="password" placeholder="**********">
+          </div>
+          <div class="actionGroup">
+            <button type="submit" class="primary" (click)="onButtonClick()">Create Account</button>
+            <button type="button" class="googleSignUp" (click)="onButtonClick()">Sign up with Google</button>
+            <p >Already have an account? <a routerLink="/app-upload" routerLinkActive="active">Log In</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
