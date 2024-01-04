@@ -19,6 +19,7 @@
   margin: 50px 0px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 15vh;
 }
 .addPhoto{
@@ -29,4 +30,8 @@
 }
 .addPhoto p{
   text-align: center;
+}
+.addPhoto img{
+  width: 50%;
+
 }
