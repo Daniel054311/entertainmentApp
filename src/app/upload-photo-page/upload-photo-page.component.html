@@ -1,6 +1,8 @@
 <section>
   <div class="gridContainer">
-    <div class="leftContainer"><img src="./../../assets/boy_pic1.png" alt=""></div>
+    <div class="leftContainer" [style.background-image]="isFileSelected ? 'url(../../assets/Vector.png)' : 'url(../../assets/bgImage.png)'">
+      <img src="./../../assets/boy_pic1.png" alt="" [class.hidden]="isFileSelected">
+    </div>
     <div class="rightContainer">
       <div class="navItems">
         <ul>
@@ -11,7 +13,7 @@
             <a routerLink="#">Step 1 / 2</a>
           </li>
           <li>
-            <a routerLink="#">Exit</a>
+            <a routerLink="" routerLinkActive="active">Exit</a>
           </li>
         </ul>
       </div>
@@ -24,9 +26,11 @@
         </div>
 
         <div class="uploadBtn">
-            <label class="primary"><input type="file" (change)="onselectFile($event)" class="inputFile">upload a photo</label>
-          <a routerLink=""  routerLinkActive="router-link-active" >Skip</a>
+            <label class="primary" [hidden]="!isLabelVisible"><input type="file" (change)="onselectFile($event)" class="inputFile">upload a photo</label>
+            <button class="primary"  [hidden]="isLabelVisible" (click)="onButtonClick()">continue</button>
+          <a routerLink="/continue-page"  routerLinkActive="router-link-active" [class.hidden]="isFileSelected">Skip</a>
         </div>
+
       </div>
       </div>
   </div>
