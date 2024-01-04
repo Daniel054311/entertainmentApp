@@ -45,8 +45,8 @@
   gap: 10px;
 }
 .settingsContainer .settings{
-  Width:15vh;
-  Height:15vh;
+  Width:20vh;
+  Height:20vh;
   border-radius: 5px;
   display: flex;
   justify-content: center;

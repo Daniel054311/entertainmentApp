@@ -19,19 +19,26 @@
             <label for="name">First Name</label>
 
             <input class="formControl" type="text" id="name" name="name" formControlName="name" placeholder= 'John Doe' required>
-            <div *ngIf="isNameEmpty" class="warning">Name is required!</div>
+            @if (isNameEmpty) {
+            <div class="warning">Name is required!</div>
+            }
           </div>
           <div class="inputGroup">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" formControlName="email"  placeholder=" johndoe@gmail.com" >
-            <div *ngIf="isEmailEmpty" class="warning">Email is required!</div>
+            @if (isEmailEmpty) {
+            <div  class="warning">Email is required!</div>
+            }
           </div>
           <div class="inputGroup">
             <label for="password">Password</label>
             <input type="password" id="password" name="password" formControlName="password" placeholder="**********">
+            @if (isPasswordEmpty) {
+            <div class="warning">Password is required!</div>
+            }
           </div>
           <div class="actionGroup">
-            <button type="submit" class="primary" (click)="onButtonClick()" [disabled]="!registrationForm.valid">Create Account</button>
+            <button type="submit" class="primary" (click)="onButtonClick()" >Create Account</button>
             <button type="button" class="googleSignUp" (click)="onButtonClick()" [disabled]="!registrationForm.valid">Sign up with Google</button>
             <p >Already have an account? <a routerLink="/app-upload" routerLinkActive="active">Log In</a></p>
           </div>

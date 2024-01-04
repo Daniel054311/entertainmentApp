@@ -22,6 +22,11 @@ export class HomeComponent implements OnInit {
     email: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required)
   });
+
+  isNameEmpty = false;
+  isEmailEmpty = false;
+  isPasswordEmpty = false;
+
   emoji: string = '../../assets/insert_emoji.png'
 
 
@@ -33,7 +38,15 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void { }
 
   onButtonClick() {
-    this.router.navigate(["/app-upload"]);
+    this.isNameEmpty = this.registrationForm.get('name')?.value === '';
+    this.isEmailEmpty = this.registrationForm.get('email')?.value === '';
+    this.isPasswordEmpty = this.registrationForm.get('password')?.value === '';
+
+    if (this.isNameEmpty || this.isEmailEmpty || this.isPasswordEmpty) {
+      
+    } else {
+      this.router.navigate(["/app-upload"]);
+    }
 }
 
 }
