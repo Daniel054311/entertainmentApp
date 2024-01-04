@@ -12,5 +12,7 @@ export class ContinuePageComponent {
 
   constructor(private router: Router) { }
   ngOnInit(): void { }
-
+  onButtonClick() {
+  this.router.navigate(['/app-dashboard'])
+}
 }
