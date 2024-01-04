@@ -1,0 +1,33 @@
+<section>
+  <div class="gridContainer">
+    <div class="leftContainer"><img src="./../../assets/boy_pic1.png" alt=""></div>
+    <div class="rightContainer">
+      <div class="navItems">
+        <ul>
+          <li>
+            <a routerLink= '' routerLinkActive="active">Back</a>
+          </li>
+          <li>
+            <a routerLink="#">Step 1 / 2</a>
+          </li>
+          <li>
+            <a routerLink="#">Exit</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="uploadContent">
+        <div class="addPhoto">
+        <h1>Add Photo</h1>
+        <p>Add a photo so other members know who you <br> are</p>
+        <img [src]="profileUrl"  alt="" class="user">
+        </div>
+
+        <div class="uploadBtn">
+            <label class="primary"><input type="file" (change)="onselectFile($event)" class="inputFile">upload a photo</label>
+          <a routerLink=""  routerLinkActive="router-link-active" >Skip</a>
+        </div>
+      </div>
+      </div>
+  </div>
+</section>
